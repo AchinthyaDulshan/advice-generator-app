@@ -10,13 +10,11 @@ const AdviceCard = () => {
     const getAdvice = async () => {
         try {
             const response = await fetch('https://api.adviceslip.com/advice');
-            console.log(response);
             if (!response.ok) {
                 throw new Error("Error while fetching data..!");
             }
 
             const data = await response.json();
-            console.log(data);
             setAdviceNo(data.slip.id);
             setAdvice(data.slip.advice);
 
@@ -43,7 +41,7 @@ const AdviceCard = () => {
             {/* mobile  */}
             <img src="src/assets/pattern-divider-mobile.svg" className='mx-auto pb-5 md:hidden' alt="divider" />
             {/* bottom button  */}
-            <button onClick={getAdvice} className='bg-Neon-Green rounded-full p-4 absolute bottom-0 right-1/2 translate-x-1/2 translate-y-1/2 hover:drop-shadow-neon-green transition-all duration-300'><img src="src/assets/icon-dice.svg" className='' alt="" /></button>
+            <button onClick={getAdvice} className='bg-Neon-Green rounded-full p-4 absolute bottom-0 right-1/2 translate-x-1/2 translate-y-1/2 hover:drop-shadow-neon-green transition-all duration-300'><img src="src/assets/icon-dice.svg" alt="dice" /></button>
         </div>
         // man card end 
     )

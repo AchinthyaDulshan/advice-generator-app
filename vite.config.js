@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base:"advice-generator-app/",
+  base:"/advice-generator-app/",
   plugins: [react()],
 })
