@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react'
+import dividerDesktop from '../assets/pattern-divider-desktop.svg';
+import dividerMobile from '../assets/pattern-divider-mobile.svg';
+import iconDice from '../assets/icon-dice.svg';
 
 const AdviceCard = () => {
 
@@ -37,11 +40,11 @@ const AdviceCard = () => {
             <p className='text-[28px] text-Light-Cyan pb-5 text-center'>"{advice}"</p>
             {/* divider  */}
             {/* desktop  */}
-            <img src="src/assets/pattern-divider-desktop.svg" className='mx-auto pb-5 hidden md:block' alt="divider" />
+            <img src={dividerDesktop} className='mx-auto pb-5 hidden md:block' alt="divider" />
             {/* mobile  */}
-            <img src="src/assets/pattern-divider-mobile.svg" className='mx-auto pb-5 md:hidden' alt="divider" />
+            <img src={dividerMobile} className='mx-auto pb-5 md:hidden' alt="divider" />
             {/* bottom button  */}
-            <button onClick={getAdvice} className='bg-Neon-Green rounded-full p-4 absolute bottom-0 right-1/2 translate-x-1/2 translate-y-1/2 hover:drop-shadow-neon-green transition-all duration-300'><img src="src/assets/icon-dice.svg" alt="dice" /></button>
+            <button onClick={getAdvice} className='bg-Neon-Green rounded-full p-4 absolute bottom-0 right-1/2 translate-x-1/2 translate-y-1/2 hover:drop-shadow-neon-green transition-all duration-300'><img src={iconDice} alt="dice" /></button>
         </div>
         // man card end 
     )
